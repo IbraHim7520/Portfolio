@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Portfolio Website",
+    "image": "/portfolio.jpeg",
+    "description": "My personal portfolio website showcasing projects, skills, and contact information with responsive design.",
+    "techstack": "Frontend",
+    "technologies": ["React.js", "Next.js", "Tailwind CSS", "AOS"],
+    "liveLink": "https://your-live-link.com/portfolio",
+    "githubRepo": "https://github.com/yourusername/portfolio"
+  },
+  {
+    "title": "Quick Stay",
+    "image": "/quickstay.png",
+    "description": "A modern property booking platform allowing users to browse and book stays easily with secure authentication.",
+    "techstack": "MERN",
+    "technologies": ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS", "Firebase"],
+    "liveLink": "https://your-live-link.com/quickstay",
+    "githubRepo": "https://github.com/yourusername/quickstay"
+  },
+  {
+    "title": "Skill Up",
+    "image": "/skillup.png",
+    "description": "A skill tracking and learning platform to help users track their progress and improve in various technologies.",
+    "techstack": "MERN",
+    "technologies": ["React.js", "Node.js", "Express.js", "MongoDB", "Firebase", "Tailwind CSS", "JWT"],
+    "liveLink": "https://your-live-link.com/skillup",
+    "githubRepo": "https://github.com/yourusername/skillup"
+  }
+]

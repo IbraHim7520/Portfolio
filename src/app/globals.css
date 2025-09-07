@@ -1,26 +1,33 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.bg-dark { background-color: #0F111A; }
+.bg-secondary { background-color: #1A1F2B; }
+
+/* Text colors */
+.text-primary-col { color: #E5E7EB; }       /* Main readable text */
+.text-secondary-col { color: #9CA3AF; }     /* Subtext / muted text */
+.text-accent-col { color: #2563EB; }        /* Headings / primary accent */
+.text-accent2-col { color: #7C3AED; }       /* Small highlights */
+.text-cta-col { color: #F59E0B; }           /* Call-to-action text */
+
+/* Background accents */
+.bg-accent-col { background-color: #2563EB; }
+.bg-accent2-col { background-color: #7C3AED; }
+.bg-cta-col { background-color: #F59E0B; }
+
+/* Borders / dividers */
+.border-divider-col { border-color: #2A2E3E; }
+
+/* Buttons example */
+.btn-primary-col {
+  background-color: #2563EB;
+  color: #E5E7EB;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: 0.3s;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.btn-primary:hover {
+  background-color: #7C3AED;
 }
