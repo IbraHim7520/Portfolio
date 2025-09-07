@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import 'aos/dist/aos.css';  
 import Aos from 'aos';
 import emailjs from '@emailjs/browser';
@@ -7,32 +7,37 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const page = () => {
     const form = useRef();
-
+    const [loading , setLoading] = useState(false)
     useEffect(() => {
         Aos.init({ duration: 1000 });
     }, []);
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
 
-        emailjs.sendForm(
-            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,      // Replace with your Service ID
-            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,     // Replace with your Template ID
-            form.current,
-            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY       // Replace with your Public Key
-        )
-        .then((result) => {
-           
-            toast.success('Message sent successfully!');
-            form.current.reset(); // Reset form after sending
-        }, (error) => {
-            
-            toast.error('Failed to send message, try again.');
-        });
-    };
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      form.current,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
+        setLoading(false);
+        toast.success("Message sent successfully!");
+        form.current.reset();
+      },
+      (error) => {
+        setLoading(false);
+        toast.error("Failed to send message, try again.");
+        console.error(error.text);
+      }
+    );
+  };
 
     return (
-        <div className='p-5 min-h-screen flex flex-col justify-center text-white space-y-12'>
+        <div className='p-5 flex flex-col justify-center text-white space-y-12'>
             <Toaster />
             {/* Contact Me Section with Form */}
             <div className='w-full space-y-6 bg-dark p-6 rounded-xl shadow-lg' data-aos="fade-up">
