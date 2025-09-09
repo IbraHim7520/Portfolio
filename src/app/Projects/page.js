@@ -5,7 +5,7 @@ import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const Page = () => {
+const ProjectPage = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -86,4 +86,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default ProjectPage;

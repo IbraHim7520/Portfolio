@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const page = () => {
+const SkillPage = () => {
     return (
         <div className='p-5 min-h-screen space-y-6 text-white flex flex-col lg:justify-center'>
 <div className='w-full flex flex-col items-center p-6'>
@@ -127,4 +127,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default SkillPage;

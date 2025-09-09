@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import 'aos/dist/aos.css';  
 import Aos from 'aos';
 
-const page = () => {
+const AboutPage = () => {
     useEffect(() => {
         Aos.init({
             duration: 1000
@@ -48,4 +48,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default AboutPage;
