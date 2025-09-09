@@ -5,7 +5,7 @@ import Aos from 'aos';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 
-const page = () => {
+const Page = () => {
     const form = useRef();
     const [loading , setLoading] = useState(false)
     useEffect(() => {
@@ -104,4 +104,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;
