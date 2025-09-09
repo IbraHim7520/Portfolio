@@ -28,7 +28,7 @@ const SkillPage = () => {
       </div>
 
       <div className="flex flex-col items-center bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-delay="100">
-        <Image src="/js.png" width={80} height={80} alt="JavaScript" className="object-contain mb-3" />
+        <Image src="/s.png" width={80} height={80} alt="JavaScript" className="object-contain mb-3" />
         <p className="text-sm md:text-base font-medium text-center">JavaScript</p>
       </div>
 
@@ -114,7 +114,7 @@ const SkillPage = () => {
 
 
       <div className="flex flex-col items-center bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
-        <Image src="/github.jpeg" width={80} height={80} alt="GitHub" className="object-contain mb-3" />
+        <Image src="/github.png" width={80} height={80} alt="GitHub" className="object-contain text-white mb-3" />
         <p className="text-sm md:text-base font-medium text-center">GitHub</p>
       </div>
     </div>
